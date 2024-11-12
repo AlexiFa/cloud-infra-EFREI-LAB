@@ -16,8 +16,6 @@ jobs:
         working-directory: rentalService
         run: |
           export SHELL=/bin/bash
-          pwd
-          ls
           ./gradlew build
           docker build -f ./Dockerfile -t local/rental .
           docker images
