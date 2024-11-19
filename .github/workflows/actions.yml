@@ -12,6 +12,10 @@ jobs:
         with:
           distribution: 'adopt'
           java-version: '21'
+      - name: Start Kubernetes minikube
+        uses: medyagh/setup-minikube@master
+      - name: Try the Kubernetes cluster
+        run: kubectl get nodes
       - name: Build and test
         working-directory: rentalService
         run: |
