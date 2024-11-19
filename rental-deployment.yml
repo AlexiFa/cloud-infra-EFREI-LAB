@@ -6,7 +6,7 @@ spec:
   replicas: 1
   selector:
     matchLabels:
-      app: rental-deployment-app
+      app: rental-deployment-label
   template:
     metadata:
       labels:
@@ -15,5 +15,5 @@ spec:
       containers:
         - image: alex6f/rentalservice:1
           imagePullPolicy: IfNotPresent
-          name: rental_service
+          name: rental-service-container
       restartPolicy: Always

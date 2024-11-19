@@ -23,3 +23,12 @@ jobs:
           ./gradlew build
           docker build -f ./Dockerfile -t local/rental .
           docker images
+          
+
+      - name: Deploy app on Kubernetes
+        run: |
+          kubectl apply -f rental-deployment.yml
+          kubectl apply -f rental-service.yml
+          kubectl get pods
+          kubectl get services
+          kubectl get deployments
