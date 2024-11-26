@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: rental-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: rental-deployment-label
+  template:
+    metadata:
+      labels:
+        app: rental-deployment-label
+    spec:
+      containers:
+        - image: alex6f/rentalservice:1
+          imagePullPolicy: IfNotPresent
+          name: rental-service-container
+      restartPolicy: Always
