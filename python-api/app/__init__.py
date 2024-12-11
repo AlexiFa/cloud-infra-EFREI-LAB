@@ -5,7 +5,3 @@ def create_app():
     app = Flask(__name__)
     register_routes(app)
     return app
-
-# @app.route("/")
-# def hello():
-#     return "hello"

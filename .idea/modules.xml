@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/cloud-infra-EFREI-LAB.iml" filepath="$PROJECT_DIR$/.idea/cloud-infra-EFREI-LAB.iml" />
+      <module fileurl="file://$PROJECT_DIR$/python-api/python-api.iml" filepath="$PROJECT_DIR$/python-api/python-api.iml" />
     </modules>
   </component>
 </project>
