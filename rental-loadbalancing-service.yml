@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    app: rental-loadbalancing-service-app
+  name: rental-loadbalancing-service
+spec:
+  ports:
+    - nodePort: 30945
+      port: 8080
+      protocol: TCP
+      targetPort: 8080
+  selector:
+    app: rental-deployment-label
+  type: LoadBalancer
